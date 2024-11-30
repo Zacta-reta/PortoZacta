@@ -1,0 +1,153 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  background: #121212;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+nav ul li a:hover {
+  background: #1f1f1f;
+}
+
+#hero-section {
+  height: 100vh;
+  background: linear-gradient(135deg, #333, #555);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#hero-section h2 {
+  font-size: 3rem;
+}
+
+#hero-section p {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+#hero-section button {
+  padding: 10px 20px;
+  border: none;
+  background: #1f1f1f;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+#hero-section button:hover {
+  background: #333;
+}
+
+#tentang, #projek, #kontak {
+  padding: 80px 10%;
+}
+
+section {
+  margin-top: 100px;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#projek ul {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#projek article {
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+}
+
+#projek article:hover {
+  transform: translateY(-10px);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #777;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Parallax Effect */
+.parallax {
+  background: url('assets/bg.jpg') no-repeat center center/cover;
+  height: 400px;
+  position: relative;
+  background-attachment: fixed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #projek ul {
+    flex-direction: column;
+  }
+}
