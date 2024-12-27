@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parikesit Aji | Latihan Web</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar" id="navbar">
+      <!-- Navigation -->
+      <nav>
+        <div id="toggle-navigation" onclick="toggleMenu()"><a>&#9776; <span>Navigation</span></a></div>
+        <ul class="navbar-menu">
+          <li><a href="#" onclick="closeMenu()">Beranda</a></li>
+          <li><a href="#tentang" onclick="closeMenu()">Tentang</a></li>
+          <li><a href="#Kecakapan" onclick="closeMenu()">Kecakapan</a></li>
+          <li><a href="#kontak" onclick="closeMenu()">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div id="content" class="container">
+        <!-- Hero Section / Jumbotron -->
+        <article id="hero-section">
+          <div class="contain">
+            <h1 class="animation-text">Hello, World!</h1>
+            <p>Awal dari imajinasi tak terbatas!</p>
+            <a href="#tentang" ><button class="cta">Klik disini / Gulir kebawah untuk melanjutkan</button></a>
+            <div class="dark-mode-text">
+              <p>Lebih nyaman dengan mode gelap?</p>
+              <button class="darkmode-toggle" onclick="toggleDarkMode()" id="darkmode-btn">Klik disini untuk mode gelap</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tentang -->
+        <section id="tentang" class="container">
+          <div class="jarak"></div>
+          <h2>Tentang Saya</h2>
+          <div class="tentang">
+            <aside>
+              <div class="profile-card">
+                <img src="assets/foto-profil.png" alt="gambar saya">
+                <div class="profile-card-body">
+                  <h3 class="profile-title">Parikesit Aji</h3>
+                  <hr>
+                  <div class="dropdown">
+                    <p id="quote-title" class="toggle-title">Quote</p>
+                    <div id="quote" class="toggle-content">
+                      <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit." : )</p>
+                    </div>
+                    <p id="social-title" class="toggle-title">Social Media</p>
+                    <div id="social" class="toggle-content">
+                      <a href="https://instagram.com/arikesitaji_"><i class="fa-brands fa-instagram"></i>@parikesit_aji</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+
+            <article>
+              <p>"Pelajar aktif yang percaya setiap proses pasti membuahkan hasil. Selalu bersemangat mengembangkan diri melalui organisasi, public speaking dan eksplorasi ilmu-ilmu baru dalam kehidupan. Setiap tantangan yang ada merupakan peluang baru untuk belajar dan tumbuh, menjadikan setiap langkah dan proses menjadi langkah yang bermakna bagi masa depan. Menikmati setiap proses sebagai bagian seru dalam kehidupan"</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Kecakapan -->
+        <section id="Kecakapan" class="container">
+          <div class="jarak"></div>
+          <h2>Kecakapan</h2>
+          <!-- Navigation -->
+          <div class="slider-nav">
+            <button class="active" onclick="showSlide(0)">HTML</button>
+            <button onclick="showSlide(1)">CSS</button>
+            <button onclick="showSlide(2)">JS</button>
+          </div>
+          <div class="slider">
+            <!-- HTML -->
+            <article class="slide">
+              <img src="assets/html.png" alt="gambar">
+              <div class="slide-content">
+                <h3>HTML</h3>
+                <p>Memahami penggunaan HTML untuk membuat struktur dasar halaman web yang terorganisir dengan baik. Dapat membuat elemen-elemen seperti heading, paragraf, tabel, form, dan lainnya dengan benar, serta memastikan halaman web mudah diakses.</p>
+              </div>
+            </article>
+
+            <!-- CSS -->
+            <article class="slide">
+              <img src="assets/css.png" alt="gambar">
+              <div class="slide-content">
+                <h3>CSS</h3>
+                <p>Memahami CSS untuk mendesain dan memodifikasi tampilan halaman web, mencakup pengaturan layout, warna, tipografi, dan elemen-elemen visual lainnya. Dapat membuat desain yang responsif agar tampilan website tetap optimal di berbagai perangkat, serta mengaplikasikan berbagai teknik styling dasar.</p>
+              </div>
+            </article>
+
+            <!-- JS -->
+            <article class="slide">
+              <img src="assets/js.png" alt="gambar">
+              <div class="slide-content">
+                <h3>JS</h3>
+                <p>Memahami JavaScript dasar untuk menambah interaktivitas pada halaman web, seperti membuat elemen-elemen dinamis, menangani event, dan memanipulasi DOM. Dapat membuat fungsionalitas seperti menu dropdown dan lainnya dengan JavaScript untuk meningkatkan pengalaman pengguna.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Kontak -->
+        <section id="kontak" class="container">
+          <div class="jarak"></div>
+          <h2 class="text">Kontak</h2>
+          <div class="card-container">
+            <a class="card" href="https://wa.me/+6288985461525">
+              <h3>Whatsapp</h3>
+              <p>088985461525</p>
+            </a>
+            <a class="card" href="https://mail.google.com/mail/?view=cm&fs=1&to=mustikobps@gmail.com&su=Subject">
+              <h3>Gmail</h3>
+              <p>mustikobps@gmail.com</p>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2024. Web ini dibuat oleh Parikesit Aji</p>
+      </div>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
+</html>
